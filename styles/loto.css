@@ -11,9 +11,22 @@ div.loto.right{
 }
 
 div.loto.up{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+    
     height: 30%;
     background-color: crimson;
 }
+
+div.loto.result{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-left: 40%;
+    border: solid 1px black;
+    background-color: azure;
+}
+
 div.loto.down{
     height: 70%;
     background-color: darkorchid;
