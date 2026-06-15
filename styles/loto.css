@@ -1,0 +1,20 @@
+
+
+div.loto.left{
+
+    width: 60%;
+    background-color: brown;
+}
+div.loto.right{
+    width: 40%;
+    background-color: chartreuse;
+}
+
+div.loto.up{
+    height: 30%;
+    background-color: crimson;
+}
+div.loto.down{
+    height: 70%;
+    background-color: darkorchid;
+}
