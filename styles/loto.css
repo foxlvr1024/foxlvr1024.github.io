@@ -13,9 +13,19 @@ div.loto.right{
 div.loto.up{
     display: grid;
     grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
-    
+    align-items: center;
     height: 30%;
     background-color: crimson;
+}
+
+p.up{
+    width: 48px;
+    height: 32px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 48px;
+    text-align: center;
+    color: black;
 }
 
 div.loto.result{
@@ -25,9 +35,21 @@ div.loto.result{
     margin-left: 40%;
     border: solid 1px black;
     background-color: azure;
+    
 }
 
 div.loto.down{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     height: 70%;
     background-color: darkorchid;
+    align-items: center;
+}
+div.btn{
+    border: solid 5px black;
+    background-color: beige;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    margin-left: 100%;
 }
