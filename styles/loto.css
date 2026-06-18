@@ -47,9 +47,13 @@ div.loto.down{
 }
 div.btn{
     border: solid 5px black;
-    background-color: beige;
+    background-color: white;
     width: 75px;
     height: 75px;
     margin: auto;
     margin-left: 100%;
+}
+
+div.btn:hover{
+     background-color: gray;
 }
