@@ -17,6 +17,7 @@ let highscore=Load();
 UpdateLabels();
 function Chance()
 {
+    if(count==0) return count;
     let chance = Math.trunc(count/5);
     chance++;
     chance*=5;
