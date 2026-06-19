@@ -52,8 +52,6 @@ div.btn{
     height: 75px;
     margin: auto;
     margin-left: 100%;
-}
-
-div.btn:hover{
-     background-color: gray;
+    user-select: none;
+    
 }
