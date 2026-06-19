@@ -63,3 +63,25 @@ function Unhover(index)
         }
     }
 }
+
+
+function Check()
+{
+    let br = 0;
+    for(let i=0;i<37;i++)
+    {
+        if(toggled[index])
+        {
+            br++;
+        }
+    }
+
+    if(br<7)
+    {
+        return false;
+    }
+    if(br>7)
+    {
+        return false;
+    }
+}

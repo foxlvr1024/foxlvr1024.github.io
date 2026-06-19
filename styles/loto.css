@@ -27,6 +27,15 @@ p.up{
     text-align: center;
     color: black;
 }
+p.down{
+     width: 48px;
+    height: 32px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 48px;
+    text-align: center;
+    color: black;
+}
 
 div.loto.result{
     width: 100px;
@@ -53,5 +62,6 @@ div.btn{
     margin: auto;
     margin-left: 100%;
     user-select: none;
-    
+    font-size: 32px;
+
 }
