@@ -145,3 +145,14 @@ div.button:active::before {
  -webkit-transform: translate3d(0, 0, -1em);
  transform: translate3d(0, 0, -1em);
 }
+
+div.divide{
+    display: block;
+
+}
+#p{
+    font-size: 32px;
+    margin-top: 25px;
+    text-align: center;
+    
+}
