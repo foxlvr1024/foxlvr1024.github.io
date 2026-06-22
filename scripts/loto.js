@@ -1,6 +1,10 @@
 const btns = [];
 const toggled = [];
 
+let btn = document.getElementById("btn");
+btn.addEventListener("click",Press);
+
+
 for(let i=0;i<37;i++)
 {
     let name = "btn"+(i+1).toString();
@@ -65,12 +69,25 @@ function Unhover(index)
 }
 
 
+
+function Press()
+{
+    if(Check())
+    {
+        document.getElementById("p").innerHTML="";
+    }
+    else
+    {
+        document.getElementById("p").innerHTML="Number of selected numbers must be 7";
+    }
+}
+
 function Check()
 {
     let br = 0;
     for(let i=0;i<37;i++)
     {
-        if(toggled[index])
+        if(toggled[i])
         {
             br++;
         }
@@ -84,4 +101,5 @@ function Check()
     {
         return false;
     }
+    return true;
 }
