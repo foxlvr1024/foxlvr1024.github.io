@@ -1,10 +1,14 @@
 const btns = [];
 const toggled = [];
-
+const results = [];
 let btn = document.getElementById("btn");
 btn.addEventListener("click",Press);
 
-
+for(let i=0;i<7;i++)
+{
+    let name = "result"+(i+1).toString();
+    results.push(document.getElementById(name));
+}
 for(let i=0;i<37;i++)
 {
     let name = "btn"+(i+1).toString();
@@ -75,6 +79,7 @@ function Press()
     if(Check())
     {
         document.getElementById("p").innerHTML="";
+        Randomise();
     }
     else
     {
@@ -102,4 +107,36 @@ function Check()
         return false;
     }
     return true;
+}
+
+function Randomise()
+{
+    const nums = [];
+    for(let i=0;i<7;i++)
+    {
+        let num = Math.trunc(Math.random()*37)+1;
+        let bool=true;
+        for(let j=i-1;j>-1;j--)
+        {
+            if(nums[j]==num)
+            {
+                bool=false;
+            }
+        }
+        if(bool)
+        {
+            nums.push(num);
+        }
+        else
+        {
+            i--;
+        }
+
+    }
+    nums.sort((a,b) => a-b);
+    for(let i=0;i<7;i++)
+    {
+        
+        results[i].innerHTML=nums[i];
+    }
 }
