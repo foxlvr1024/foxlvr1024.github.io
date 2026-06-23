@@ -1,6 +1,7 @@
 const btns = [];
 const toggled = [];
 const results = [];
+const bg = [];
 let btn = document.getElementById("btn");
 btn.addEventListener("click",Press);
 
@@ -8,6 +9,8 @@ for(let i=0;i<7;i++)
 {
     let name = "result"+(i+1).toString();
     results.push(document.getElementById(name));
+    let name2= "bg"+(i+1).toString();
+    bg.push(document.getElementById(name2));
 }
 for(let i=0;i<37;i++)
 {
@@ -98,15 +101,8 @@ function Check()
         }
     }
 
-    if(br<7)
-    {
-        return false;
-    }
-    if(br>7)
-    {
-        return false;
-    }
-    return true;
+    if(br==7) return true;
+    return false;
 }
 
 function Randomise()
@@ -138,5 +134,16 @@ function Randomise()
     {
         
         results[i].innerHTML=nums[i];
+        if(toggled[nums[i]])
+        {
+            bg[i].style.backgroundColor = "lime";
+        }
+        else
+        {
+            bg[i].style.backgroundColor = "white";
+        }
     }
+
+
+
 }
