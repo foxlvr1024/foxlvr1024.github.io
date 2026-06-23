@@ -1,0 +1,108 @@
+div.l{
+    display: inline-block;
+    width: 80%;
+    background-color: red;
+}
+
+div.r{
+    display: inline-block;
+    width: 20%;
+    background-color: green;
+}
+
+div.center{
+    margin-top: 75%;
+    margin-right: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*button*/
+
+
+div.button {
+    height: 250px;
+    width: 250px;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: 30%;
+    cursor:grab;
+    
+    
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ font-family: inherit;
+ font-size: 15px;
+}
+
+div.button {
+ font-weight: 600;
+ color: #382b22;
+ text-transform: uppercase;
+ padding: 1.25em 2em;
+ background: #F40101;
+ border: 2px solid #A30036;
+ border-radius: 50%;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+ -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+div.button::before {
+ position: absolute;
+ content: '';
+ 
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #A30036;
+ border-radius: inherit;
+ -webkit-box-shadow: 0 0 0 2px #A30036, 0 0.625em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #A30036, 0 0.625em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+div.button:hover {
+ background: #DF0101;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+div.button:hover::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.5em, -1em);
+ transform: translate3d(0, 0.5em, -1em);
+}
+
+div.button:active {
+ background: #A30036;
+ -webkit-transform: translate(0em, 0.75em);
+ transform: translate(0em, 0.75em);
+}
+
+div.button:active::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0, -1em);
+ transform: translate3d(0, 0, -1em);
+}
