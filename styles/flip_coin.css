@@ -121,7 +121,7 @@ div.inner2{
 
 h1{
     font-size: 44px;
-    background-color: #F6E3A2;
+    background-color: white;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; 
@@ -136,7 +136,7 @@ h1{
 }
 h2{
     font-size: 64px;
-    color:#F5DD90;
+    color:white;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; 
@@ -144,7 +144,7 @@ h2{
 }
 h3{
     font-size: 24px;
-    background-color: #F6E3A2;
+    background-color: white;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none; 
