@@ -1,29 +1,48 @@
 div.l{
     display: inline-block;
     width: 80%;
-    background-color: red;
+    margin:auto;
+    margin-left: 5px;
+    /*background-color: red;*/
 }
 
 div.r{
     display: inline-block;
     width: 20%;
-    background-color: green;
+    /*background-color: green;*/
 }
 
 div.center{
-    margin-top: 75%;
+    margin-top: 25%;
     margin-right: 75%;
+    
 }
 
 
 
+h2{
+    font-size: 64px;
+    color:white;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    margin-top: 35%;
+    text-align: center;
+}
 
 
+div.cell{
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
 
 
-
-
-
+div.grid{
+    display: grid;
+    /*grid-template-columns: 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px 24px;*/
+}
 
 
 
@@ -33,7 +52,7 @@ div.center{
 div.button {
     height: 250px;
     width: 250px;
-    margin-top:auto;
+    margin-top:30%;
     margin-bottom:auto;
     margin-left: 30%;
     cursor:grab;
