@@ -21,7 +21,7 @@ div.center{
 
 
 h2{
-    font-size: 64px;
+    font-size: 48px;
     color:white;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -50,11 +50,11 @@ div.grid{
 
 
 div.button {
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
     margin-top:30%;
     margin-bottom:auto;
-    margin-left: 30%;
+    margin-left: 75%;
     cursor:grab;
     
     
