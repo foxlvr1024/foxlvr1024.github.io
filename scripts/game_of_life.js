@@ -2,7 +2,7 @@ let grid = document.getElementById("grid");
 const btns = [];
 const toggled = [];
 Start();
-
+document.getElementById("reset").addEventListener("click",Reset);
 function Start()
 {
     let str = "";
@@ -84,6 +84,22 @@ function Unhover(index)
         else
         {
             btns[index].style.backgroundColor = "white";
+        }
+    }
+}
+
+
+function Reset()
+{
+    for(let i=0;i<63;i++)
+    {
+        
+        for(let j=0;j<34;j++)
+        {
+            
+            let br = i*34+j;
+            toggled[br]=false;
+            btns[br].style.backgroundColor = "white";
         }
     }
 }
