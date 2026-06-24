@@ -1,11 +1,19 @@
+let click = new Audio("../sounds/click.mp3");
 let grid = document.getElementById("grid");
+let strt = document.getElementById("strt");
 const btns = [];
 const toggled = [];
+let ticking;
 Start();
+strt.addEventListener("click",Strt);
 document.getElementById("reset").addEventListener("click",Reset);
 document.getElementById("step").addEventListener("click",Step);
+
+setInterval(Tick,250)
+
 function Start()
 {
+    ticking =false;
     let str = "";
     let display = "";
     for(let i=0;i<63;i++)
@@ -97,6 +105,12 @@ function Unhover(index)
 
 function Reset()
 {
+    if (click.duration > 0 && !click.paused) {
+            click.pause();
+            click.currentTime=0;
+        }
+        click.play();
+
     for(let i=0;i<34;i++)
     {
         
@@ -113,6 +127,14 @@ function Reset()
 
 function Step()
 {
+    if(!ticking)
+    {
+        if (click.duration > 0 && !click.paused) {
+            click.pause();
+            click.currentTime=0;
+        }
+        click.play();
+    }
     const pom = [];
     for(let i=0;i<34;i++)
     {
@@ -159,4 +181,32 @@ function Step()
         }
     }
 
+}
+
+
+function Tick()
+{
+    if(ticking)
+    {
+        Step();
+    }
+}
+
+function Strt()
+{
+    if (click.duration > 0 && !click.paused) {
+            click.pause();
+            click.currentTime=0;
+        }
+        click.play();
+    if(ticking)
+    {
+        ticking=false;
+        strt.innerHTML="<h2>START</h2>";
+    }
+    else
+    {
+        ticking=true;
+        strt.innerHTML="<h2>STOP</h2>";
+    }
 }
