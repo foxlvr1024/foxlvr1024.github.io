@@ -169,7 +169,7 @@ div.navigation{
     
     min-width: calc(20% - 14px);
     
-    width: calc(20% - 14px);
+    /*width: calc(20% - 14px);*/
     margin: none;
     background-color: #6477d6;
 }
@@ -223,14 +223,14 @@ p.con.conte{
 }
 
 div.cont.lef{
-    width: 15%;
+    /*width: 15%;*/
     height: 150px;
     
     
 }
 
 div.cont.righ{
-    width: 84%;
+    width: auto;
     min-height: 150px;
     
 }  
@@ -253,7 +253,8 @@ article.middle{
 article.nav{
     display: flex;
     flex-direction: column;
-    width: calc(100% - 50px);
+    min-width: calc(100% - 50px);
+    max-width: calc(100% - 50px);
     min-height: 200px;
     margin: auto;
     margin-top: 30px;
@@ -265,7 +266,7 @@ article.nav{
 
 div.nav.top{
     width: auto;
-    height: 40px;
+    min-height: 40px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     background-image:linear-gradient(to right, #FFFFFF,#D6DFF7);
@@ -335,7 +336,7 @@ img.btns
     /*min-width: calc(100% - 14px);
     max-width: calc(100% - 14px);
     */
-    background-color: purple;
+    
     width: 100%;
     }
     div.navigation{
@@ -360,6 +361,29 @@ img.btns
 
 
     border-radius: 4px;
+    }
+    div.cont.righ{
+    width: 100%;
+    min-height: 150px;
+    
+    }  
+    div.cont.conte{
+    
+    display: flex;
+    flex:1;
+    min-height: 100px;
+    min-width: 25px;
+    width: 100%;
+    margin: 5px;
+    
+    
+    }
+    div.content{
+    /*display: inline-block;*/
+    flex: 1;
+    width: 95%;
+    margin: 15px;
+    
     }
  
 }
