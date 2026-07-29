@@ -23,7 +23,6 @@ section.main{
 
     
     width: calc(100% - 14px);
-    background-color: red;
     border-left-width: 7px;
     border-right-width: 7px;
     border-bottom-width: 0px;
