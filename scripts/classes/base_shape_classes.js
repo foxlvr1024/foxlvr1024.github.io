@@ -25,7 +25,7 @@ class Shape{
         //newDiv.style.borderColor = this.border_color;
 
 
-        alert(newDiv.style.borderWidth);
+        /*alert(newDiv.style.borderWidth);
         alert(newDiv.style.borderStyle);
         alert(newDiv.style.borderColor);
         
