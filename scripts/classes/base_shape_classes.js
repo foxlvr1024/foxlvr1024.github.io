@@ -11,6 +11,13 @@ class Shape{
         newDiv.style.backgroundColor = this.color;
         newDiv.style.width = "50px";
         newDiv.style.height = "50px";
+        //newDiv.style.margin = "auto";
+        //newDiv.style.marginTop = "50%";
+        //newDiv.style.verticalAlign = "middle";
+        /*
+        #position: absolute;
+        #top: 50%;
+        */
         
         return newDiv;
     }
