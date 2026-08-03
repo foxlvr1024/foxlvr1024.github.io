@@ -89,6 +89,16 @@ class Box extends Shape{
     }
 }
 
+class Circle extends Box{
+    constructor(size,color)
+    {
+        super(size,color);
+        
+        this.setCorners("50%");
+    }
+
+}
+
 class Rectangle extends Box{
     constructor(width,height,color)
     {
@@ -105,10 +115,8 @@ class Rectangle extends Box{
 
 function maintest()
 {
-    const shape = new Rectangle("100px","200px","green")
-    shape.setBorder("5px","2px","0px","5px");
-    shape.setBorderColor("yellow");
-    shape.setCorners("10px");
+    const shape = new Circle("250px","#ff00ff");
+    
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
