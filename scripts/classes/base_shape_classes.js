@@ -3,11 +3,8 @@ class Shape{
     constructor(color)
     {
         this.color = color;
-        this.border_top = "0px";
-        this.border_bottom = "0px";
-        this.border_left = "0px";
-        this.border_right = "0px";
-        this.border_color = "black";
+        this.setBorder("0px");
+        this.setBorder("black");
     }
 
     getShape()
@@ -16,6 +13,7 @@ class Shape{
         newDiv.style.backgroundColor = this.color;
         newDiv.style.width = "50px";
         newDiv.style.height = "50px";
+        
         //newDiv.style.borderWidth = "thick";
         //newDiv.style.borderStyle = "solid";
         newDiv.style.borderTop = this.border_top + " solid " + this.border_color;
@@ -46,10 +44,18 @@ class Shape{
         this.border_left = size;
         this.border_right = size;
     }
+    setBorder(size_top, size_bottom, size_left, size_right)
+    {
+        this.border_top = size_top;
+        this.border_bottom = size_bottom;
+        this.border_left = size_left;
+        this.border_right = size_right;
+    }
     setBorderColor(color)
     {
         this.border_color = color;
     }
+
 }
 
 class Box extends Shape{
@@ -85,7 +91,7 @@ class Rectangle extends Box{
 function maintest()
 {
     const shape = new Rectangle("100px","200px","green")
-    shape.setBorder("5px");
+    shape.setBorder("5px","2px","0px","5px");
     shape.setBorderColor("yellow");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
