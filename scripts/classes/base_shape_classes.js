@@ -20,6 +20,13 @@ class Shape{
         newDiv.style.borderBottom = this.border_bottom + " solid " + this.border_color;
         newDiv.style.borderLeft = this.border_left + " solid " + this.border_color;
         newDiv.style.borderRight = this.border_right + " solid "+ this.border_color;
+
+
+        newDiv.style.borderTopLeftRadius = this.corner_topleft;
+        newDiv.style.borderTopRightRadius = this.corner_topright
+        newDiv.style.borderBottomLeftRadius = this.corner_bottomleft;
+        newDiv.style.borderBottomRightRadius = this.corner_bottomright;
+        
         //newDiv.style.borderColor = this.border_color;
 
 
@@ -54,6 +61,14 @@ class Shape{
     setBorderColor(color)
     {
         this.border_color = color;
+    }
+    setCorners(radius)
+    {
+        this.corner_topleft = radius;
+        this.corner_topright = radius;
+        this.corner_bottomleft = radius;
+        this.corner_bottomright = radius;
+           
     }
 
 }
@@ -93,6 +108,7 @@ function maintest()
     const shape = new Rectangle("100px","200px","green")
     shape.setBorder("5px","2px","0px","5px");
     shape.setBorderColor("yellow");
+    shape.setCorners("10px");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
