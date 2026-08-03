@@ -4,7 +4,8 @@ class Shape{
     {
         this.color = color;
         this.setBorder("0px");
-        this.setBorder("black");
+        this.setBorderColor("black");
+        
     }
 
     getShape()
@@ -16,10 +17,10 @@ class Shape{
         
         //newDiv.style.borderWidth = "thick";
         //newDiv.style.borderStyle = "solid";
-        newDiv.style.borderTop = this.border_top + " solid " + this.border_color;
-        newDiv.style.borderBottom = this.border_bottom + " solid " + this.border_color;
-        newDiv.style.borderLeft = this.border_left + " solid " + this.border_color;
-        newDiv.style.borderRight = this.border_right + " solid "+ this.border_color;
+        newDiv.style.borderTop = this.border_top + " solid " + this.border_color_top;
+        newDiv.style.borderBottom = this.border_bottom + " solid " + this.border_color_bottom;
+        newDiv.style.borderLeft = this.border_left + " solid " + this.border_color_left;
+        newDiv.style.borderRight = this.border_right + " solid "+ this.border_color_right;
 
 
         newDiv.style.borderTopLeftRadius = this.corner_topleft;
@@ -69,9 +70,23 @@ class Shape{
             this.border_right = size_top;
         }
     }
-    setBorderColor(color)
+    setBorderColor(color_top,color_bottom,color_left,color_right)
     {
-        this.border_color = color;
+        if(typeof color_bottom !== "undefined")
+        {
+            this.border_color_top = color_top;
+            this.border_color_bottom = color_bottom;
+            this.border_color_left = color_left;
+            this.border_color_right = color_right;
+            
+        }
+        else
+        {
+            this.border_color_top = color_top;
+            this.border_color_bottom = color_top;
+            this.border_color_left = color_top;
+            this.border_color_right = color_top;
+        }
     }
     setCorners(radius)
     {
@@ -126,9 +141,9 @@ class Rectangle extends Box{
 
 function maintest()
 {
-    const shape = new Circle("250px","#ff00ff");
-    shape.setBorder("10px");
-    shape.setBorderColor("#00ff00");
+    const shape = new Circle("250px","blue");
+    shape.setBorder("25px","25px","25px","25px");
+    shape.setBorderColor("transparent","#ff0000","#ff0000","#ff0000");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
