@@ -44,19 +44,30 @@ class Shape{
         
         return newDiv;
     }
-    setBorder(size)
+    /*setBorder(size)
     {
         this.border_top = size;
         this.border_bottom = size;
         this.border_left = size;
         this.border_right = size;
-    }
+    }*/
     setBorder(size_top, size_bottom, size_left, size_right)
     {
-        this.border_top = size_top;
-        this.border_bottom = size_bottom;
-        this.border_left = size_left;
-        this.border_right = size_right;
+        if(typeof size_bottom !== "undefined")
+        {
+            this.border_top = size_top;
+            this.border_bottom = size_bottom;
+            this.border_left = size_left;
+            this.border_right = size_right;
+        
+        }
+        else
+        {
+            this.border_top = size_top;
+            this.border_bottom = size_top;
+            this.border_left = size_top;
+            this.border_right = size_top;
+        }
     }
     setBorderColor(color)
     {
@@ -116,7 +127,8 @@ class Rectangle extends Box{
 function maintest()
 {
     const shape = new Circle("250px","#ff00ff");
-    
+    shape.setBorder("10px");
+    shape.setBorderColor("#00ff00");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
