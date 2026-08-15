@@ -29,7 +29,7 @@ class Shape{
         newDiv.style.borderBottomRightRadius = this.corner_bottomright;
         
         newDiv.style.boxShadow = this.shadow;
-
+        newDiv.style.backgroundImage = this.gradient;
         //newDiv.style.borderColor = this.border_color;
 
 
@@ -119,6 +119,23 @@ class Shape{
         }
     }
 
+    setLinGradient(direction, color)
+    {
+        if(typeof color !== "undefined") //direction and colors => direction + color1, color2, color3...
+        {
+            this.gradient = "linear-gradient(" + direction+" , "+color+")";
+        }
+        else if(typeof direction !== "undefined") //only colors => color1, color2, color3....
+        {
+            this.gradient = "linear-gradient(" + direction +")";
+        }
+        else // nothing
+        {
+            this.gradient = "none";
+        }
+    }
+
+
 }
 
 class Box extends Shape{
@@ -163,8 +180,8 @@ class Rectangle extends Box{
 
 function maintest()
 {
-    const shape = new Rectangle("200px","100px","brown");
-    shape.setShadow("10px","10px","10px","green");
+    const shape = new Box("100px","brown");
+    shape.setLinGradient("to right","green,yellow,red");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
