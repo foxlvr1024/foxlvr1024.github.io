@@ -5,7 +5,7 @@ class Shape{
         this.color = color;
         this.setBorder("0px");
         this.setBorderColor("black");
-        
+        this.setShadow("0px","0px");
     }
 
     getShape()
@@ -28,6 +28,8 @@ class Shape{
         newDiv.style.borderBottomLeftRadius = this.corner_bottomleft;
         newDiv.style.borderBottomRightRadius = this.corner_bottomright;
         
+        newDiv.style.boxShadow = this.shadow;
+
         //newDiv.style.borderColor = this.border_color;
 
 
@@ -97,6 +99,26 @@ class Shape{
            
     }
 
+    setShadow(size_x, size_y, blur, spread, color)
+    {
+        if(typeof color !== "undefined")                                                        //size_x size_y blur spread color
+        {
+            this.shadow = size_x + " " + size_y + " " + blur + " " + spread + " " + color;
+        }
+        else if(typeof spread !== "undefined")                                                  //size_x size_y blur color
+        {
+            this.shadow = size_x + " " + size_y + " " + blur + " " + "0px" + " " + spread;
+        }
+        else if(typeof blur !== "undefined")                                                    //size_x size_y color
+        {
+            this.shadow = size_x + " " + size_y + " " + "0px" + " " + "0px" + " " + blur;
+        }
+        else                                                                                    // size_x size_y
+        {
+            this.shadow = size_x + " " + size_y + " " + "0px" + " " + "0px" + " " + "black";
+        }
+    }
+
 }
 
 class Box extends Shape{
@@ -141,9 +163,8 @@ class Rectangle extends Box{
 
 function maintest()
 {
-    const shape = new Circle("250px","blue");
-    shape.setBorder("25px","25px","25px","25px");
-    shape.setBorderColor("transparent","#ff0000","#ff0000","#ff0000");
+    const shape = new Rectangle("200px","100px","brown");
+    shape.setShadow("10px","10px","10px","green");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
