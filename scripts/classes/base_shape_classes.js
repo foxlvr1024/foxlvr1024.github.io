@@ -11,6 +11,7 @@ class Shape{
     getShape()
     {
         const newDiv = document.createElement("div");
+        newDiv.style.zIndex = this.zindex;
         newDiv.style.backgroundColor = this.color;
         newDiv.style.width = "50px";
         newDiv.style.height = "50px";
@@ -119,6 +120,11 @@ class Shape{
         }
     }
 
+    setZIndex(index)
+    {
+        this.zindex = index;
+    }
+
     setLinGradient(direction, color)
     {
         if(typeof color !== "undefined") //direction and colors => direction + color1, color2, color3...
@@ -181,7 +187,7 @@ class Rectangle extends Box{
 function maintest()
 {
     const shape = new Box("100px","brown");
-    shape.setLinGradient("to right","green,yellow,red");
+    shape.setLinGradient("-100deg","olive,green,lime");
     document.body.insertBefore(shape.getShape(),document.body.childNodes[0]);
 }
 
