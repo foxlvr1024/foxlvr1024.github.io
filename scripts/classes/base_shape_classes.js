@@ -6,6 +6,7 @@ class Shape{
         this.setBorder("0px");
         this.setBorderColor("black");
         this.setShadow("0px","0px");
+        this.setLinGradient();
     }
 
     getShape()
@@ -35,6 +36,14 @@ class Shape{
         newDiv.style.backgroundImage = this.gradient;
 
         newDiv.style.position = "absolute";
+
+
+        newDiv.style.left = this.left;
+        newDiv.style.right = this.right;
+        newDiv.style.top = this.top;
+        newDiv.style.bottom = this.bottom;
+        
+
         //newDiv.style.borderColor = this.border_color;
 
 
@@ -160,6 +169,14 @@ class Shape{
         }
     }
 
+    setPosition(left,right,top,bottom)
+    {
+        this.left = left;
+        this.right = right;
+        this.top = top;
+        this.bottom = bottom;
+    }
+
 }
 
 class Box extends Shape{
@@ -212,4 +229,4 @@ function maintest()
 
 
 
-maintest();
+//maintest();
