@@ -50,10 +50,14 @@ function Start()
     for(let i=0;i<28;i++)
     {
         const btn = document.createElement("btn");
-        btn.style.width = "50px";
-        btn.style.height ="50px";
+        btn.style.width = "75px";
+        btn.style.height ="75px";
         btn.style.backgroundColor ="red";
         btn.style.margin = "auto";
+        btn.style.borderRadius = "50%";
+        btn.style.border = "5px solid #CCCCCC";
+        btn.style.backgroundImage = "radial-gradient(" + col_bg[i]+")"
+        btn.style.cursor = "pointer";
         btn.addEventListener("click",function(){setBackground(i)});
         //btn.style.position ="relative";
         Themes.appendChild(btn);
