@@ -1,7 +1,7 @@
 
-    const Button = document.createElement("btn");
+const Button = document.createElement("btn");
 const Overlay = document.createElement("div");
-
+const Themes = document.createElement("div");
 function Start()
 {
     Button.style.zIndex = "3";
@@ -34,17 +34,45 @@ function Start()
 
     Overlay.style.display = "none";
     document.body.insertBefore(Overlay,document.body.childNodes[0]);
+
+    Themes.style.zIndex = "11";
+    Themes.style.width = "420px";
+    Themes.style.height = "auto";
+    Themes.style.position = "absolute";
+    Themes.style.right = "5dvw";
+    Themes.style.top = "3dvh";
+    Themes.style.bottom = "3dvh";
+    Themes.style.display = "none";
+    Themes.style.backgroundColor = "gray";
+    Themes.style.gridTemplateColumns = "auto auto auto";
+    Themes.style.padding = "10px";
+    //Themes.style.content = "center";
+    for(let i=0;i<28;i++)
+    {
+        const btn = document.createElement("btn");
+        btn.style.width = "50px";
+        btn.style.height ="50px";
+        btn.style.backgroundColor ="red";
+        btn.style.margin = "auto";
+        btn.addEventListener("click",function(){setBackground(i)});
+        //btn.style.position ="relative";
+        Themes.appendChild(btn);
+    }
+
+    document.body.insertBefore(Themes,document.body.childNodes[0]);
 }
 
 function Open()
 {
     //alert("hehe xd");
     Overlay.style.display = "block";
+    Themes.style.display = "grid";
 }
 
 function Close()
 {
     Overlay.style.display = "none";
+    Themes.style.display = "none";
 }
 
 Start();

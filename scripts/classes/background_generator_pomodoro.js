@@ -121,19 +121,38 @@ col_hl2.push("#CCD9E2");
 
 function setBackground(index)
 {
+    console.log(background.getShape());
+    console.log(document.body.contains(background.getShape()));
+    
+    for(let i=0;i<document.body.children.length;i++)
+    {
+        if(document.body.childNodes[i].isEqualNode(background.getShape()) || document.body.childNodes[i].isEqualNode(highlight_1.getShape()) ||document.body.childNodes[i].isEqualNode(highlight_2.getShape())) 
+        {
+            console.log("removed");
+            document.body.removeChild(document.body.childNodes[i]);
+            i--;
+        }
+        
+    }
     background.setZIndex("1");
     background.setRadGradient("circle",col_bg[index]);
-    document.body.insertBefore(background.getShape(),document.body.childNodes[0]);
+    //document.body.insertBefore(background.getShape(),document.body.childNodes[0]);
     highlight_1.setZIndex("2");
     highlight_1.setShadow("0px","0px","200px","100px",col_hl1[index]);
     highlight_1.setPosition("25dvw","0","20dvh","0");
-    document.body.insertBefore(highlight_1.getShape(),document.body.childNodes[0]);
     highlight_2.setZIndex("2");
     highlight_2.setShadow("0px","0px","150px","50px",col_hl2[index]);
     highlight_2.setPosition("auto","24dvw","auto","20dvh");
+    //document.body.insertBefore(highlight_2.getShape(),document.body.childNodes[0]);
+    
+    //console.log(background_node);
+    document.body.insertBefore(background.getShape(),document.body.childNodes[0]);
+    document.body.insertBefore(highlight_1.getShape(),document.body.childNodes[0]);
     document.body.insertBefore(highlight_2.getShape(),document.body.childNodes[0]);
+
 }
 
-
-
 setBackground(27);
+
+
+//setBackground(15);
