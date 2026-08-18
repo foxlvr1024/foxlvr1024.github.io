@@ -1,29 +1,50 @@
 
-
+    const Button = document.createElement("btn");
+const Overlay = document.createElement("div");
 
 function Start()
 {
-    const newDiv = document.createElement("btn");
-    newDiv.style.zIndex = "3";
-    newDiv.style.width = "50px";
-    newDiv.style.height = "50px";
-    newDiv.style.margin = "0";
-    newDiv.style.padding = "0";
+    Button.style.zIndex = "3";
+    Button.style.width = "50px";
+    Button.style.height = "50px";
+    Button.style.margin = "0";
+    Button.style.padding = "0";
 
-    newDiv.style.position = "absolute";
-    newDiv.style.right = "1dvw";
-    newDiv.style.top = "1dvh";
-    newDiv.style.backgroundColor = "green";
+    Button.style.position = "absolute";
+    Button.style.right = "1dvw";
+    Button.style.top = "1dvh";
+    Button.style.backgroundColor = "green";
 
-    newDiv.addEventListener("click",function(){Open()});
-    newDiv.style.cursor = "pointer";
+    Button.addEventListener("click",function(){Open()});
+    Button.style.cursor = "pointer";
 
-    document.body.insertBefore(newDiv,document.body.childNodes[0]);
+    Button.style.display = "block";
+    document.body.insertBefore(Button,document.body.childNodes[0]);
+
+    Overlay.style.zIndex = "10";
+    Overlay.style.width = "100dvw";
+    Overlay.style.height = "100dvh";
+    Overlay.style.margin = "0";
+    Overlay.style.padding = "0";
+    Overlay.style.position = "absolute";
+    Overlay.style.backgroundColor = "#00000080";
+
+    Overlay.addEventListener("click",function(){Close()});
+    Overlay.style.cursor = "pointer";
+
+    Overlay.style.display = "none";
+    document.body.insertBefore(Overlay,document.body.childNodes[0]);
 }
 
 function Open()
 {
-    alert("hehe xd");
+    //alert("hehe xd");
+    Overlay.style.display = "block";
+}
+
+function Close()
+{
+    Overlay.style.display = "none";
 }
 
 Start();
