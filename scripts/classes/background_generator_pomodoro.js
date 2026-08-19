@@ -121,14 +121,14 @@ col_hl2.push("#CCD9E2");
 
 function setBackground(index)
 {
-    console.log(background.getShape());
-    console.log(document.body.contains(background.getShape()));
+    //console.log(background.getShape());
+    //console.log(document.body.contains(background.getShape()));
     
     for(let i=0;i<document.body.children.length;i++)
     {
         if(document.body.childNodes[i].isEqualNode(background.getShape()) || document.body.childNodes[i].isEqualNode(highlight_1.getShape()) ||document.body.childNodes[i].isEqualNode(highlight_2.getShape())) 
         {
-            console.log("removed");
+            //console.log("removed");
             document.body.removeChild(document.body.childNodes[i]);
             i--;
         }

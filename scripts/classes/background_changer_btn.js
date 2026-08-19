@@ -1,4 +1,10 @@
-
+/*
+#81717A
+#9D8CA1
+#9993B2
+#A7ABDD
+#B4D4EE
+*/
 const Button = document.createElement("btn");
 const Overlay = document.createElement("div");
 const Themes = document.createElement("div");
@@ -43,9 +49,14 @@ function Start()
     Themes.style.top = "3dvh";
     Themes.style.bottom = "3dvh";
     Themes.style.display = "none";
-    Themes.style.backgroundColor = "gray";
+    Themes.style.backgroundColor = "none";
     Themes.style.gridTemplateColumns = "auto auto auto";
     Themes.style.padding = "10px";
+    Themes.style.borderRadius = "15px";
+    Themes.style.backgroundImage = "radial-gradient( #A7ABDD90 , #9993B290 70%)";
+    Themes.style.border = "4px solid #81717A";
+    Themes.style.backdropFilter = "blur(13.2px)";
+    Themes.style.boxShadow = "0 4px 30px rgba(0, 0, 0, 0.1)";
     //Themes.style.content = "center";
     for(let i=0;i<28;i++)
     {
@@ -55,10 +66,23 @@ function Start()
         btn.style.backgroundColor ="red";
         btn.style.margin = "auto";
         btn.style.borderRadius = "50%";
-        btn.style.border = "5px solid #CCCCCC";
+        btn.style.border = "5px solid #B4D4EE";
         btn.style.backgroundImage = "radial-gradient(" + col_bg[i]+")"
         btn.style.cursor = "pointer";
+        
         btn.addEventListener("click",function(){setBackground(i)});
+        btn.addEventListener("mouseover",function(){
+            //console.log("in");
+            btn.style.width = "71px";
+            btn.style.height ="71px";
+            btn.style.border = "7px solid #9993B2";
+        });
+        btn.addEventListener("mouseout",function(){
+            //console.log("out");
+            btn.style.width = "75px";
+            btn.style.height ="75px";
+            btn.style.border = "5px solid #B4D4EE";
+        });
         //btn.style.position ="relative";
         Themes.appendChild(btn);
     }
