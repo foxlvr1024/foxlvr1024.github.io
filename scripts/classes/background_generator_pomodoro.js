@@ -152,7 +152,7 @@ function setBackground(index)
 
 }
 
-setBackground(27);
+//setBackground(27);
 
 
 //setBackground(15);

@@ -19,7 +19,7 @@ function Start()
     Button.style.backgroundImage = "radial-gradient( #A7ABDD90 , #9993B290 70%)";
     Button.style.boxShadow = "0px 5px 10px 1px #22222280";
     Button.style.position = "absolute";
-    Button.style.right = "1dvw";
+    Button.style.right = "1dvh";
     Button.style.top = "1dvh";
     Button.style.backgroundColor = "green";
     Button.style.transition = "all 0.2s";
@@ -90,7 +90,10 @@ function Start()
         btn.style.backgroundImage = "radial-gradient(" + col_bg[i]+")"
         btn.style.cursor = "pointer";
         btn.style.transition = "all 0.2s";
-        btn.addEventListener("click",function(){setBackground(i)});
+        btn.addEventListener("click",function(){
+            setBackground(i);
+            localStorage.setItem("pomodoro_background",i);
+        });
         btn.addEventListener("mouseover",function(){
             //console.log("in");
             btn.style.width = "71px";
@@ -108,6 +111,15 @@ function Start()
     }
 
     document.body.insertBefore(Themes,document.body.childNodes[0]);
+    let save = localStorage.getItem("pomodoro_background");
+    if(save==null)
+    { 
+        setBackground(0);
+    }
+    else
+    {
+        setBackground(Number(save));
+    }
 }
 
 function Open()
