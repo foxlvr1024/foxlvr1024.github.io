@@ -15,13 +15,32 @@ function Start()
     Button.style.height = "50px";
     Button.style.margin = "0";
     Button.style.padding = "0";
-
+    Button.style.borderRadius = "50%";
+    Button.style.backgroundImage = "radial-gradient( #A7ABDD90 , #9993B290 70%)";
+    Button.style.boxShadow = "0px 5px 10px 1px #22222280";
     Button.style.position = "absolute";
     Button.style.right = "1dvw";
     Button.style.top = "1dvh";
     Button.style.backgroundColor = "green";
+    Button.style.transition = "all 0.2s";
 
     Button.addEventListener("click",function(){Open()});
+    Button.addEventListener("mouseover",function(){
+            //console.log("in");
+            //Button.style.width = "48px";
+            //Button.style.height ="48px";
+            Button.style.backgroundImage = "radial-gradient( #9993B290 , #9D8CA190 70%)";
+            Button.style.boxShadow = "0px 5px 10px 1px #222222A0";
+            //btn.style.border = "7px solid #9993B2";
+        });
+    Button.addEventListener("mouseout",function(){
+            //console.log("out");
+            //Button.style.width = "50px";
+            //Button.style.height ="50px";
+            Button.style.backgroundImage = "radial-gradient( #A7ABDD90 , #9993B290 70%)";
+            Button.style.boxShadow = "0px 5px 10px 1px #22222280";
+            //btn.style.border = "5px solid #B4D4EE";
+        });
     Button.style.cursor = "pointer";
 
     Button.style.display = "block";
@@ -34,6 +53,7 @@ function Start()
     Overlay.style.padding = "0";
     Overlay.style.position = "absolute";
     Overlay.style.backgroundColor = "#00000080";
+    Overlay.style.backdropFilter = "blur(13.2px)";
 
     Overlay.addEventListener("click",function(){Close()});
     Overlay.style.cursor = "pointer";
@@ -69,7 +89,7 @@ function Start()
         btn.style.border = "5px solid #B4D4EE";
         btn.style.backgroundImage = "radial-gradient(" + col_bg[i]+")"
         btn.style.cursor = "pointer";
-        
+        btn.style.transition = "all 0.2s";
         btn.addEventListener("click",function(){setBackground(i)});
         btn.addEventListener("mouseover",function(){
             //console.log("in");
