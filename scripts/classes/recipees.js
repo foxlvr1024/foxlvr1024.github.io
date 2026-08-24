@@ -24,15 +24,47 @@ function Start()
     for(let i=0;i<12;i++)
     {
         const newDiv = document.createElement("div");
+        newDiv.style.display = "inline-flex";
         newDiv.style.backgroundColor = "cyan";
         newDiv.style.width = "auto";
         newDiv.style.height = "auto";
         newDiv.style.margin = "2.5%";
+        newDiv.style.padding = "0";
         if(i%2==0)
         {
             newDiv.style.backgroundColor = "magenta";
         }
 
+        const Text = document.createElement("p");
+        Text.style.backgroundColor = "red";
+        Text.style.width = "70%";
+        Text.style.height = "100%";
+        Text.style.margin = "0";
+        
+
+        const BtnPlus = document.createElement("btn");
+        BtnPlus.style.backgroundColor = "green";
+        BtnPlus.style.width = "10%";
+        BtnPlus.style.height = "100%";
+        BtnPlus.style.margin = "0";
+
+        const BtnMinus = document.createElement("btn");
+        BtnMinus.style.backgroundColor = "blue";
+        BtnMinus.style.width = "10%";
+        BtnMinus.style.height = "100%";
+        BtnMinus.style.margin = "0";
+
+        const Counter = document.createElement("p");
+        Counter.style.backgroundColor = "yellow";
+        Counter.style.width = "10%";
+        Counter.style.height = "100%";
+        Counter.style.margin = "0";
+
+        newDiv.appendChild(Text);
+        newDiv.appendChild(BtnPlus);
+        newDiv.appendChild(BtnMinus);
+        newDiv.appendChild(Counter);
+        
         Container.appendChild(newDiv);
     }
 
