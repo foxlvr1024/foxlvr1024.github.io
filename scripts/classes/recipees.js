@@ -30,6 +30,7 @@ function Start()
         newDiv.style.height = "auto";
         newDiv.style.margin = "2.5%";
         newDiv.style.padding = "0";
+        newDiv.style.alignItems = "center";
         if(i%2==0)
         {
             newDiv.style.backgroundColor = "magenta";
@@ -45,14 +46,25 @@ function Start()
         const BtnPlus = document.createElement("btn");
         BtnPlus.style.backgroundColor = "green";
         BtnPlus.style.width = "10%";
-        BtnPlus.style.height = "100%";
-        BtnPlus.style.margin = "0";
+        //BtnPlus.style.height = "100%";
+        BtnPlus.style.aspectRatio = "1/1";
+        BtnPlus.style.margin = "2.5px";
+        BtnPlus.style.borderRadius = "50%";
 
         const BtnMinus = document.createElement("btn");
         BtnMinus.style.backgroundColor = "blue";
         BtnMinus.style.width = "10%";
-        BtnMinus.style.height = "100%";
-        BtnMinus.style.margin = "0";
+        //BtnMinus.style.height = "0";
+        BtnMinus.style.aspectRatio = "1/1";
+        //BtnMinus.style.marginBottom = "10%";
+        //BtnMinus.style.margin = "5px";
+        
+        //BtnMinus.style.paddingBottom = "5%";
+        //BtnMinus.style.paddingTop = "5%";
+        
+        BtnMinus.style.margin = "2.5px";
+        BtnMinus.style.borderRadius = "50%";
+        
 
         const Counter = document.createElement("p");
         Counter.style.backgroundColor = "yellow";
