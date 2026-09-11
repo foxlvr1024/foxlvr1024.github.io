@@ -24,7 +24,7 @@ document.getElementById("close").addEventListener("click",tempclick);
 document.getElementById("start").addEventListener("click",tempclick);
 
 document.getElementById("home").addEventListener("click",function(){changeURL("index.html")});
-document.getElementById("myprojects").addEventListener("click",function(){changeURL("pages/construction.html")});
+document.getElementById("myprojects").addEventListener("click",function(){changeURL("pages/myprojects.html")});
 document.getElementById("devlogs").addEventListener("click",function(){changeURL("pages/construction.html")});
 document.getElementById("reviews").addEventListener("click",function(){changeURL("pages/construction.html")});
 document.getElementById("games").addEventListener("click",function(){changeURL("pages/games.html")});
