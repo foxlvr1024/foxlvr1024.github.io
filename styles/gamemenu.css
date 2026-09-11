@@ -1,0 +1,17 @@
+div.background{
+    display: inline-flex;
+    flex:1;
+    background-color: black;
+    
+    
+    
+}
+
+div.buttonplace{
+    width: 10%;
+    background-color: red;
+}
+
+#cards{
+    flex:1;
+}
