@@ -67,7 +67,7 @@ function Start()
         
 
         const Counter = document.createElement("p");
-        Counter.style.backgroundColor = "yellow";
+        Counter.style.backgroundColor = "brown";
         Counter.style.width = "10%";
         Counter.style.height = "100%";
         Counter.style.margin = "0";
