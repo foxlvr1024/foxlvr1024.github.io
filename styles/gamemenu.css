@@ -10,8 +10,56 @@ div.background{
 div.buttonplace{
     width: 10%;
     background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #cards{
     flex:1;
 }
+
+
+btn.leftbtn{
+    
+    
+    /*position: relative;*/
+    
+    width: 50%;
+    aspect-ratio: 1/1;
+    transform: translate(25%, 0) rotate(45deg);
+    border: 1em solid yellow;
+    border-top: 0;
+    border-right: 0;
+
+
+
+}
+btn.leftbtn:hover{
+    border-color: orange;
+}
+
+btn.rightbtn{
+    width: 50%;
+    aspect-ratio: 1/1;
+    transform: translate(-25%, 0) rotate(45deg);
+    border: 1em solid yellow;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+btn.rightbtn:hover{
+    border-color: orange;
+}
+
+/*btn.leftbtn::before{
+    content: "";
+    display: inline-block;
+   
+    height: 1em;
+    border: calc(1.41 * 6em) solid yellow;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    transform: rotate(45deg) translate(0.2em,2.75em);
+}*/
