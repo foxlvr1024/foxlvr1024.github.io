@@ -9,7 +9,7 @@ div.background{
 
 div.buttonplace{
     width: 10%;
-    background-color: red;
+    background-color: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +52,25 @@ btn.rightbtn:hover{
     border-color: orange;
 }
 
+
+div.game{
+    width: 25%;
+    height: 70%;
+    background-color: gray;
+    margin: auto;
+    
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border: 10px solid green;
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*btn.leftbtn::before{
     content: "";
     display: inline-block;
