@@ -20,7 +20,7 @@ div.buttonplace{
 }
 
 
-btn.leftbtn{
+#leftbtn{
     
     
     /*position: relative;*/
@@ -31,29 +31,34 @@ btn.leftbtn{
     border: 1em solid yellow;
     border-top: 0;
     border-right: 0;
-
+    cursor: grab;
 
 
 }
-btn.leftbtn:hover{
+#leftbtn:hover{
     border-color: orange;
 }
 
-btn.rightbtn{
+#rightbtn{
     width: 50%;
     aspect-ratio: 1/1;
     transform: translate(-25%, 0) rotate(45deg);
     border: 1em solid yellow;
     border-bottom: 0;
     border-left: 0;
+    cursor: grab;
 }
 
-btn.rightbtn:hover{
+#rightbtn:hover{
     border-color: orange;
 }
 
 
 div.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 25%;
     height: 70%;
     background-color: gray;
@@ -71,6 +76,33 @@ div.game{
     justify-content: center;
     align-items: center;
 }
+
+img.gameicon{
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 40%;
+    aspect-ratio: 1/1;
+}
+
+h1.name{
+
+    font-size: xx-large;
+    height: 30%;
+    
+}
+
+btn.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 50%;
+    margin-bottom: 20%;
+    background-color: aqua;
+    
+}
+
 /*btn.leftbtn::before{
     content: "";
     display: inline-block;
