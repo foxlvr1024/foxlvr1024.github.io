@@ -17,6 +17,7 @@ div.buttonplace{
 
 #cards{
     flex:1;
+    
 }
 
 
@@ -75,6 +76,8 @@ div.game{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 img.gameicon{
@@ -121,7 +124,7 @@ btn.play{
 
 
 @media screen and (max-width: 768px) {
-
+    
     div.btnplace{
         display: none;
     }
