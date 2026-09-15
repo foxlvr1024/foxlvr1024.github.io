@@ -118,3 +118,28 @@ btn.play{
     border-left: 0;
     transform: rotate(45deg) translate(0.2em,2.75em);
 }*/
+
+
+@media screen and (max-width: 768px) {
+
+    div.btnplace{
+        display: none;
+    }
+    #leftbtn{
+        display:none;
+    }
+    #rightbtn{
+        display:none;
+    }
+    #cards{
+        display: block;
+    }
+    div.game{
+        width: 60%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+
+
+}
