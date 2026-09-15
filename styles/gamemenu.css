@@ -81,15 +81,19 @@ img.gameicon{
     
     margin-top: 5%;
     margin-bottom: 5%;
-    height: 40%;
+    height: auto;
+    max-height: 40%;
+    max-width: 90%;
     aspect-ratio: 1/1;
+    
 }
 
 h1.name{
 
     font-size: xx-large;
     height: 30%;
-    
+    width: 90%;
+    text-align: center;
 }
 
 btn.play{
