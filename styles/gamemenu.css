@@ -1,9 +1,9 @@
 div.background{
     display: inline-flex;
     flex:1;
+    
     background-color: black;
-    
-    
+    flex-wrap: wrap;
     
 }
 
@@ -92,11 +92,14 @@ img.gameicon{
 }
 
 h1.name{
-
-    font-size: xx-large;
+    display: flex;
+    font-size: 2vw;
     height: 30%;
     width: 90%;
     text-align: center;
+    align-items: center;
+    padding: auto;
+    
 }
 
 btn.play{
@@ -124,23 +127,35 @@ btn.play{
 
 
 @media screen and (max-width: 768px) {
-    
-    div.btnplace{
+    div.background{
+        margin-bottom: 30px;
+    }
+    div.buttonplace{
         display: none;
+        width: 0;
+        
+    }
+    h1.name{
+        font-size: xx-large;
     }
     #leftbtn{
         display:none;
+        width: 0;
     }
     #rightbtn{
         display:none;
+        width: 0;
     }
     #cards{
         display: block;
     }
     div.game{
-        width: 60%;
+        
+        height: 600px;
+        width: 300px;
         margin-top: 25px;
         margin-bottom: 25px;
+        
     }
 
 
