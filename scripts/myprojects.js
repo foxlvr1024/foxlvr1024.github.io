@@ -12,11 +12,12 @@ for(let i=0;i<cards.childElementCount;i++)
 }
 
 
-
+window.addEventListener("resize",Update);
 
 
 function Update()
 {
+    
     if(window.innerWidth<=768)
     {
         for(let i=0;i<games.length;i++)
