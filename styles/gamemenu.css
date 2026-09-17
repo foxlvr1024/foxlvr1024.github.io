@@ -88,7 +88,7 @@ img.gameicon{
     max-height: 40%;
     max-width: 90%;
     aspect-ratio: 1/1;
-    
+    user-select: none;
 }
 
 h1.name{
@@ -99,7 +99,7 @@ h1.name{
     text-align: center;
     align-items: center;
     padding: auto;
-    
+    user-select: none;
 }
 
 btn.play{
@@ -110,7 +110,7 @@ btn.play{
     width: 50%;
     margin-bottom: 20%;
     background-color: aqua;
-    
+    user-select: none;
 }
 
 /*btn.leftbtn::before{

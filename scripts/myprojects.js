@@ -13,6 +13,24 @@ for(let i=0;i<cards.childElementCount;i++)
 
 
 window.addEventListener("resize",Update);
+document.getElementById("leftbtn").addEventListener("click",function(){
+    ChangeIndex(-1);
+});
+document.getElementById("rightbtn").addEventListener("click",function(){
+    ChangeIndex(1);
+});
+
+
+
+function ChangeIndex(value)
+{
+    if(index+value>=0 && index+value<=games.length-3)
+    {
+        index+=value;
+        Update();
+    }
+}
+
 
 
 function Update()
