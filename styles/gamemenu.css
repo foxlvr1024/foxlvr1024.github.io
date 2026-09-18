@@ -97,9 +97,12 @@ h1.name{
     height: 30%;
     width: 90%;
     text-align: center;
+    justify-content: center;
     align-items: center;
-    padding: auto;
+    
     user-select: none;
+    
+    
 }
 
 btn.play{
@@ -111,6 +114,7 @@ btn.play{
     margin-bottom: 20%;
     background-color: aqua;
     user-select: none;
+    cursor: grab;
 }
 
 /*btn.leftbtn::before{
