@@ -1,3 +1,13 @@
+const links = [
+    "https://foxlvr1024.itch.io/wop",
+    "https://foxlvr1024.itch.io/retro-kitchen",
+    "https://foxlvr1024.itch.io/funcx",
+    "https://foxlvr1024.itch.io/pixel-3x6-font",
+    "https://foxlvr1024.itch.io/str-simulation",
+    "https://foxlvr1024.itch.io/robo"
+];
+
+
 const games = [];
 let cards = document.getElementById("cards");
 let index = 0;
@@ -8,6 +18,7 @@ for(let i=0;i<cards.childElementCount;i++)
     if(games[i] instanceof HTMLElement)
     {
         games[i].style.display = "none";
+        games[i].getElementsByClassName("play").item(0).addEventListener("click",function(){changeURL(links[i])});
     }
 }
 
