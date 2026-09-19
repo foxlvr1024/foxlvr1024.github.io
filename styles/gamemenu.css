@@ -2,7 +2,7 @@ div.background{
     display: inline-flex;
     flex:1;
     
-    background-color: black;
+    background-color: #010B13;
     flex-wrap: wrap;
     
 }
@@ -22,18 +22,19 @@ div.buttonplace{
 
 
 #leftbtn{
-    
-    
-    /*position: relative;*/
-    
     width: 50%;
     aspect-ratio: 1/1;
-    transform: translate(25%, 0) rotate(45deg);
+    background-color: green;
+    border: 5px solid yellow;
+    /*aspect-ratio: 1/1;
+    transform: translate(-25%, 0) rotate(45deg);
     border: 1em solid yellow;
-    border-top: 0;
-    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;*/
     cursor: grab;
-
+    corner-shape: notch bevel bevel notch;
+    border-radius: 60% 40% 40% 60%/25% 50% 50% 25%;
+    transform: rotate(180deg);
 
 }
 #leftbtn:hover{
@@ -43,11 +44,16 @@ div.buttonplace{
 #rightbtn{
     width: 50%;
     aspect-ratio: 1/1;
+    background-color: green;
+    border: 5px solid yellow;
+    /*aspect-ratio: 1/1;
     transform: translate(-25%, 0) rotate(45deg);
     border: 1em solid yellow;
     border-bottom: 0;
-    border-left: 0;
+    border-left: 0;*/
     cursor: grab;
+    corner-shape: notch bevel bevel notch;
+  border-radius: 60% 40% 40% 60%/25% 50% 50% 25%;
 }
 
 #rightbtn:hover{
@@ -67,9 +73,12 @@ div.game{
     
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    corner-top-shape: notch;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     border: 10px solid green;
+
+    box-shadow: 0px 0px 50px 1px #666666;
 }
 
 #cards{
