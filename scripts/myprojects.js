@@ -11,6 +11,8 @@ const links = [
 const games = [];
 let cards = document.getElementById("cards");
 let index = 0;
+let leftbtn = document.getElementById("leftbtn");
+let rightbtn = document.getElementById("rightbtn");
 
 for(let i=0;i<cards.childElementCount;i++)
 {
@@ -24,12 +26,13 @@ for(let i=0;i<cards.childElementCount;i++)
 
 
 window.addEventListener("resize",Update);
-document.getElementById("leftbtn").addEventListener("click",function(){
+leftbtn.addEventListener("click",function(){
     ChangeIndex(-1);
 });
-document.getElementById("rightbtn").addEventListener("click",function(){
+rightbtn.addEventListener("click",function(){
     ChangeIndex(1);
 });
+
 
 
 
