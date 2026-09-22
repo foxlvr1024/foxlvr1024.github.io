@@ -25,26 +25,28 @@ function Start()
     {
         const newDiv = document.createElement("div");
         newDiv.style.display = "inline-flex";
-        newDiv.style.backgroundColor = "cyan";
+        newDiv.style.backgroundColor = "none";
         newDiv.style.width = "auto";
         newDiv.style.height = "auto";
         newDiv.style.margin = "2.5%";
         newDiv.style.padding = "0";
         newDiv.style.alignItems = "center";
-        if(i%2==0)
-        {
-            newDiv.style.backgroundColor = "magenta";
-        }
+        
 
         const Text = document.createElement("p");
-        Text.style.backgroundColor = "red";
+        Text.style.color = "#AAAAAA";
         Text.style.width = "70%";
         Text.style.height = "100%";
         Text.style.margin = "0";
+        Text.innerHTML = "placeholder";
+        Text.style.fontSize = "3vmin";
         
+        Text.style.display = "flex";
+        Text.style.alignItems = "center";
+
 
         const BtnPlus = document.createElement("btn");
-        BtnPlus.style.backgroundColor = "green";
+        BtnPlus.style.backgroundColor = "#BBBBBB";
         BtnPlus.style.width = "10%";
         //BtnPlus.style.height = "100%";
         BtnPlus.style.aspectRatio = "1/1";
@@ -52,7 +54,7 @@ function Start()
         BtnPlus.style.borderRadius = "50%";
 
         const BtnMinus = document.createElement("btn");
-        BtnMinus.style.backgroundColor = "blue";
+        BtnMinus.style.backgroundColor = "#BBBBBB";
         BtnMinus.style.width = "10%";
         //BtnMinus.style.height = "0";
         BtnMinus.style.aspectRatio = "1/1";
@@ -67,10 +69,11 @@ function Start()
         
 
         const Counter = document.createElement("p");
-        Counter.style.backgroundColor = "brown";
+        Counter.style.backgroundColor = "#777777";
         Counter.style.width = "10%";
         Counter.style.height = "100%";
         Counter.style.margin = "0";
+        Counter.style.padding = "5px";
 
         newDiv.appendChild(Text);
         newDiv.appendChild(BtnPlus);
