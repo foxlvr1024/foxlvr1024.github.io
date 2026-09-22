@@ -124,7 +124,7 @@ img.gameicon{
 
 h1.name{
     display: flex;
-    font-size: 2vw;
+    font-size: 4vmin;
     height: 30%;
     width: 90%;
     text-align: center;
@@ -146,6 +146,7 @@ btn.play{
     background-color: aqua;
     user-select: none;
     cursor: grab;
+    font-size: 3vmin;
 }
 
 /*btn.leftbtn::before{
