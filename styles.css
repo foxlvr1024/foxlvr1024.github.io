@@ -145,7 +145,7 @@ article.startbtn:hover{
 article.taskicon{
     display: inline-block;
     height: 35px;
-    width: 35px;
+    width: 30px;
     align-content: center;
     text-align: center;
 
@@ -172,8 +172,8 @@ a{
 
 img.icon{
     margin: auto;
+   
     
-    padding: auto;
     width: 24px;
     height: 20px;
 }
@@ -356,6 +356,7 @@ img.btns
     flex-direction: column;
     /*flex-direction: column-reverse;*/
     font-family: 'Segoe UI', Tahoma;
+    
     margin:0px;
     padding: 0px;
     
@@ -417,5 +418,13 @@ img.btns
     margin: 15px;
     
     }
- 
+    p.con.conte{
+        font-size: 5vmin;
+    }
+    img.big{
+        padding-left: 0px;
+        padding-top: 0px;
+        width: 50px;
+        height: 50px;
+    }
 }
